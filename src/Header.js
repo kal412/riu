@@ -1,18 +1,35 @@
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
   return (
     <div className="header">
-      <img className="header_logo" src={"./images/logo.png"} alt="logo" />
+      <Link to="#">
+        <img className="header_logo" src={"./images/logo.png"} alt="logo" />
+      </Link>
 
       <div className="header__nav">
-        <div className="header__option">Home</div>
-        <div className="header__option">Projects</div>
-        <div className="header__option">News</div>
-        <div className="header__option">Events</div>
-        <div className="header__option">Blog</div>
-        <div className="header__option">Vacancy</div>
-        <div className="header__option">About Us</div>
+        <div className="header__option">
+          <Link to="#">Home</Link>
+        </div>
+        <div className="header__option">
+          <Link to="#">Projects</Link>
+        </div>
+        <div className="header__option">
+          <Link to="#">News</Link>
+        </div>
+        <div className="header__option">
+          <Link to="#">Events</Link>
+        </div>
+        <div className="header__option">
+          <Link to="#">Blog</Link>
+        </div>
+        <div className="header__option">
+          <Link to="#">Vacancy</Link>
+        </div>
+        <div className="header__option">
+          <Link to="#">About Us</Link>
+        </div>
       </div>
     </div>
   );
