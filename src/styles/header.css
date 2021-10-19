@@ -1,50 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 .header {
-  height: 60px;
+  height: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fafafa;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(250, 250, 250, 0)), color-stop(49%, rgba(248, 248, 248, 0.88139)), to(#f4f4f4));
+  background: linear-gradient(0deg, rgba(250, 250, 250, 0) 0%, rgba(248, 248, 248, 0.88139) 49%, #f4f4f4 100%);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 15px 200px;
+  padding: 1.5rem 20rem;
   z-index: 100;
+  -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
 .header_logo {
-  width: 100px;
-  height: 60px;
-  object-fit: contain;
+  width: 10rem;
+  height: 6rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .header__nav {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .header__option a {
   position: relative;
-  color: #002060;
-  font-size: 1em;
+  color: #1f1f1f;
   font-weight: 500;
   text-decoration: none;
   margin-left: 30px;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
 .header__option a:before {
   content: "";
   position: absolute;
-  background: #002060;
-  width: 0;
-  height: 2px;
-  bottom: 0;
+  bottom: -0.3rem;
   left: 0;
+  background: #1f1f1f;
+  width: 0;
+  height: 0.2rem;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
 .header__option a:hover:before {
   width: 100%;
 }
+/*# sourceMappingURL=header.css.map */

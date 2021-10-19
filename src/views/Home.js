@@ -6,6 +6,15 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 const Home = () => {
   return (
     <div className="home">
+      <div className="hero-carousel">
+       <center> 
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <h2>Carousel here</h2>
+       </center>
+      </div>
       <div className="content">
         <h1>
           RIU

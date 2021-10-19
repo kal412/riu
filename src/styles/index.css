@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#root {
+  font-family: "Roboto";
+  font-size: 1.4rem;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0.5rem;
+}
+
+.hero-carousel {
+  height: 60rem;
+  background-color: blue;
+  background-image: url("https://images.unsplash.com/photo-1615286922420-c6b348ffbd62?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8M2QlMjBwcmludGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80");
+}
+/*# sourceMappingURL=index.css.map */

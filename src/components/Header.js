@@ -5,12 +5,12 @@ const Header = () => {
   return (
     <div className="header">
       <Link to="#">
-        <img className="header_logo" src={"./images/logo.png"} alt="logo" />
+        <img className="header_logo" src={"./images/logo.svg"} alt="logo" />
       </Link>
 
       <div className="header__nav">
         <div className="header__option">
-          <Link to="#">Home</Link>
+          <Link to="/">Home</Link>
         </div>
         <div className="header__option">
           <Link to="#">Projects</Link>
@@ -22,7 +22,7 @@ const Header = () => {
           <Link to="#">Events</Link>
         </div>
         <div className="header__option">
-          <Link to="#">Blog</Link>
+          <Link to="/blog">Blog</Link>
         </div>
         <div className="header__option">
           <Link to="#">Vacancy</Link>
