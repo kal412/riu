@@ -3,7 +3,12 @@
 html {
   font-size: 62.5%;
 }
-
+body{
+  background: linear-gradient(255.98deg, #B4A0FD 0%, #FFFFFF 91.57%);
+  font-family: $main-font;
+  font-size: 1.4rem;
+  color:$dark;
+}
 * {
   margin: 0;
   padding: 0;
@@ -11,23 +16,29 @@ html {
           box-sizing: border-box;
 }
 
-#root{
-  font-family: $main-font;
-  font-size: 1.4rem;
-}
 .container{
   display: flex;
   flex-wrap: wrap;
   padding:0.5rem;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 
 
 //main block stylings
 .hero-carousel{
-  margin-top: -6rem;
+  margin-top: -8rem;
   height:60rem;
   background-color: blue;
   background-image: url('https://images.unsplash.com/photo-1615286922420-c6b348ffbd62?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8M2QlMjBwcmludGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80');
 
+}
+
+//for responsive design
+@media (max-width:$mobile) {
+  .container{
+    flex-direction: column;
+  }
+    
 }

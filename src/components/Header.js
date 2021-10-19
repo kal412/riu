@@ -4,8 +4,8 @@ import "../styles/header.css";
 const Header = () => {
   return (
     <div className="header">
-      <Link to="#">
-        <img className="header_logo" src={"./images/logo.svg"} alt="logo" />
+      <Link to="/">
+        <img className="header_logo" src={"./images/logo-small.png"} alt="logo" />
       </Link>
 
       <div className="header__nav">
