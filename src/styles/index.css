@@ -5,9 +5,14 @@ html {
 }
 
 body {
-  background: linear-gradient(255.98deg, #B4A0FD 0%, #FFFFFF 91.57%);
+  background: linear-gradient(255.98deg, #B4A0FD 0%, #e6e6e6 91.57%);
   font-family: "Roboto";
   font-size: 1.4rem;
+  color: #242424;
+}
+
+a {
+  text-decoration: none;
   color: #242424;
 }
 
@@ -16,6 +21,14 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.title-font {
+  font-family: "Playfair Display", serif;
+}
+
+.center {
+  text-align: center;
 }
 
 .container {
@@ -33,11 +46,69 @@ body {
           justify-content: space-evenly;
 }
 
+.container-fluid {
+  width: 100%;
+  min-height: 40rem;
+}
+
 .hero-carousel {
   margin-top: -8rem;
   height: 60rem;
   background-color: blue;
   background-image: url("https://images.unsplash.com/photo-1615286922420-c6b348ffbd62?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8M2QlMjBwcmludGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80");
+}
+
+.wp-content p {
+  margin: 0.5rem 0;
+  line-height: 1.8rem;
+  text-align: justify;
+}
+
+.wp-content ol {
+  list-style-type: decimal;
+}
+
+.wp-content ul {
+  list-style-type: disc;
+}
+
+.wp-content h1, .wp-content h2, .wp-content h3, .wp-content h4 {
+  margin-top: 1rem;
+}
+
+.wp-content blockquote {
+  border-left: 1rem solid #242424;
+}
+
+.wp-content .has-text-align-left {
+  text-align: left;
+}
+
+.wp-content .has-text-align-center {
+  text-align: center;
+}
+
+.wp-content .has-text-align-right {
+  text-align: right;
+}
+
+.wp-content .alignright {
+  float: right;
+  overflow: auto;
+}
+
+.wp-content .alignleft {
+  float: left;
+  overflow: auto;
+}
+
+.wp-content .aligncenter {
+  display: block;
+  margin: auto;
+}
+
+.wp-content img[class*="wp-image"] {
+  margin: 0.5rem;
 }
 
 @media (max-width: 680px) {

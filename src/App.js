@@ -16,9 +16,7 @@ function App() {
           <Route exact path="/blog">
             <Blog />
           </Route>
-          <Route exact path="/blog-content">
-            <BlogContent />
-          </Route>
+          <Route exact path="/blog/:id" component={BlogContent} />
         </Switch>
       </div>
     </Router>

@@ -4,16 +4,30 @@ html {
   font-size: 62.5%;
 }
 body{
-  background: linear-gradient(255.98deg, #B4A0FD 0%, #FFFFFF 91.57%);
+  background: linear-gradient(255.98deg, #B4A0FD 0%, #e6e6e6 91.57%);
   font-family: $main-font;
   font-size: 1.4rem;
   color:$dark;
 }
+a{
+  text-decoration: none;
+  color:$dark
+}
+
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.title-font{ 
+  font-family: $title-font;
+}
+
+.center{
+  text-align: center;
 }
 
 .container{
@@ -24,6 +38,10 @@ body{
   justify-content: space-evenly;
 }
 
+.container-fluid{
+  width:100%;
+  min-height: 40rem;
+}
 
 
 //main block stylings
@@ -34,6 +52,47 @@ body{
   background-image: url('https://images.unsplash.com/photo-1615286922420-c6b348ffbd62?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8M2QlMjBwcmludGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80');
 
 }
+//WP content formatters
+.wp-content{
+  p{
+    margin:0.5rem 0;
+    line-height: 1.8rem;
+    text-align: justify;
+  }
+
+  ol{
+    list-style-type:decimal;
+  }
+  
+  ul{
+    list-style-type: disc;
+  }
+
+  h1,h2,h3,h4{margin-top: 1rem;}
+
+  blockquote{
+    border-left: 1rem solid $dark;
+  }
+
+  .has-text-align-left{text-align: left}
+  .has-text-align-center{text-align: center}
+  .has-text-align-right{text-align: right}
+  .alignright{float: right;
+    overflow: auto;}
+  .alignleft{float: left;
+    overflow: auto;}
+  .aligncenter{
+        display:block;
+        margin:auto
+      }
+
+ 
+  //media formatters
+  img[class*="wp-image"]{ 
+                          margin:0.5rem;
+                      }
+}
+
 
 //for responsive design
 @media (max-width:$mobile) {
