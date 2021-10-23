@@ -27,8 +27,7 @@ const Blog = () => {
  else
     return (
         <div className="blog">
-            <h1 className="title-font center">BLOG</h1>
-            <div className="container">
+            <div class="flex-container">
                 {blogs.map((item) => (
                 <Link key={item.id} to={`/blog/${item.id}`}>
                     <BlogCard blogObject={item} />

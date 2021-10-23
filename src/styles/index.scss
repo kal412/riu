@@ -30,7 +30,8 @@ a{
   text-align: center;
 }
 
-.container{
+.container,
+.flex-container{
   display: flex;
   flex-wrap: wrap;
   padding:0.5rem;
@@ -38,19 +39,9 @@ a{
   justify-content: space-evenly;
 }
 
-.container-fluid{
-  width:100%;
-  min-height: 40rem;
-}
 
-
-//main block stylings
-.hero-carousel{
+.push-to-top{
   margin-top: -8rem;
-  height:60rem;
-  background-color: blue;
-  background-image: url('https://images.unsplash.com/photo-1615286922420-c6b348ffbd62?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8M2QlMjBwcmludGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80');
-
 }
 //WP content formatters
 .wp-content{

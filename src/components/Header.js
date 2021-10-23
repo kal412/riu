@@ -1,35 +1,62 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import "../styles/header.css";
 
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+
 const Header = () => {
+  const [header, setHeader] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 400) {
+      setHeader(true);
+    } else {
+      setHeader(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
   return (
-    <div className="header">
-      <Link to="/">
+    <div className={header ? "header active" : "header"}>
+      <Link to="#">
         <img className="header_logo" src={"./images/logo-small.png"} alt="logo" />
       </Link>
 
-      <div className="header__nav">
-        <div className="header__option">
+      <div className="menu-btn"></div>
+
+      <div className={showMenu ? "header__nav active" : "header__nav"}>
+        <div className="header__options">
           <Link to="/">Home</Link>
-        </div>
-        <div className="header__option">
+
           <Link to="#">Projects</Link>
-        </div>
-        <div className="header__option">
+
           <Link to="#">News</Link>
-        </div>
-        <div className="header__option">
+
           <Link to="#">Events</Link>
-        </div>
-        <div className="header__option">
+
           <Link to="/blog">Blog</Link>
-        </div>
-        <div className="header__option">
+
           <Link to="#">Vacancy</Link>
-        </div>
-        <div className="header__option">
+
           <Link to="#">About Us</Link>
+
+          <Link
+            to="#"
+            className="close-menu"
+            onClick={() => setShowMenu(!showMenu)}
+          >
+            <CloseIcon fontSize="large" />
+          </Link>
         </div>
+      </div>
+
+      <div className="hamburger-menu">
+        <Link to="#" onClick={() => setShowMenu(!showMenu)}>
+          <MenuIcon fontSize="large" />
+        </Link>
       </div>
     </div>
   );
