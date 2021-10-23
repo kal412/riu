@@ -1,0 +1,21 @@
+//imports
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+//variable declarations
+//colors
+$primary: #092866;//#E0E1DD;
+$secondary: #0D1B2A;
+$tertiary:#778DA9;
+$dark:#242424;
+$white:rgb(255, 255, 255);
+$offwhite:rgb(238, 238, 238);
+
+//fonts
+$main-font: 'Roboto';
+$title-font: 'Playfair Display', serif;
+
+//screen-sizes
+$tablet:900px;
+$mobile:680px;

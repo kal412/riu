@@ -1,0 +1,59 @@
+.work-card {
+  display: flex;
+  flex-direction: row;
+  width: 80rem;
+  height: 30rem;
+  border-radius: 30px;
+  box-shadow: (0px 4px 20px rgba(0, 0, 0, 0.25));
+  background: white;
+  margin-bottom: 4rem;
+}
+
+.work-card:nth-child(odd) {
+  flex-direction: row-reverse;
+
+  .work-card__image > img {
+    margin-right: unset;
+    margin-left: -3.5rem;
+  }
+}
+
+.work-card__image {
+  display: flex;
+  align-items: center;
+}
+
+.work-card__image > img {
+  height: 25rem;
+  width: 25rem;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 15px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  margin-right: -3.5rem;
+}
+
+.work-card__title {
+  font-weight: bold;
+  font-size: 1.8rem;
+  padding: 8rem 3rem;
+  padding-bottom: 2rem;
+}
+
+.work-card__description {
+  padding-left: 3rem;
+  font-size: 1.3rem;
+  text-align: justify;
+  width: 70%;
+}
+
+.view-project {
+  width: 12rem;
+  height: 3.5rem;
+  background: #54426b;
+  color: #fff;
+  border-radius: 20px;
+  margin-top: 3rem;
+  margin-left: 20rem;
+}
