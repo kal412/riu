@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 .events-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,6 +17,22 @@
   margin-top: 3rem;
 }
 
+.datestamp {
+  margin-right: 8.5rem;
+}
+
+.datestamp .date {
+  font-size: 4rem;
+  line-height: 5.6rem;
+  font-weight: bolder;
+}
+
+.datestamp .month,
+.datestamp .day {
+  font-size: 2.5rem;
+  line-height: 4.2rem;
+}
+
 .events-text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,11 +44,45 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  width: 40%;
+  margin-right: 8.5rem;
+}
+
+.events-text .title {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+
+.events-text .description {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.events-text span {
+  margin-bottom: 3rem;
+}
+
+.events-text .icons {
+  color: #242424;
+}
+
+.events-text a {
+  text-align: center;
+  background: #778DA9;
+  color: white;
+  padding: 1rem 1rem;
+  margin-top: 3rem;
+  width: 10rem;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
 }
 
 .events-image > img {
-  width: 25em;
-  height: 20rem;
+  width: 20em;
+  height: 25rem;
   -o-object-fit: cover;
      object-fit: cover;
 }

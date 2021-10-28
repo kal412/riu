@@ -15,8 +15,8 @@
 }
 
 .blog-card:hover {
-  -webkit-box-shadow: 0 1rem 1rem 0.4rem rgba(29, 72, 153, 0.5);
-          box-shadow: 0 1rem 1rem 0.4rem rgba(29, 72, 153, 0.5);
+  -webkit-box-shadow: 0 1rem 1rem 0.4rem rgba(9, 40, 102, 0.5);
+          box-shadow: 0 1rem 1rem 0.4rem rgba(9, 40, 102, 0.5);
 }
 
 .blog-card h2 {
@@ -95,7 +95,7 @@
 .author__dp img {
   width: 8rem;
   height: 8rem;
-  background-color: #1d4899;
+  background-color: #092866;
   border-radius: 50%;
 }
 

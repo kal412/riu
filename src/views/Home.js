@@ -10,6 +10,8 @@ import { Link } from "react-router-dom";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import ContactMailIcon from "@mui/icons-material/ContactMail";
+
 import News from "../components/newsCard";
 import Events from "../components/eventsCard";
 
@@ -43,18 +45,20 @@ const Home = () => {
 
         <div className="content">
           <h1>
-            <span>
-            RIU
-            </span>
+            <span>RIU</span>
           </h1>
-          <h3><span>Research and Innovation Unit</span></h3>
-          <p><span>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
-            enim veritatis perferendis atque itaque id. Repellendus, saepe quae!
-            Dolore ipsa consequuntur modi expedita distinctio, iste alias labore
-            voluptatum facilis! Corporis quo aliquam doloribus suscipit quasi ad
-            atque molestias iusto. Nam?
-          </span></p>
+          <h3>
+            <span>Research and Innovation Unit</span>
+          </h3>
+          <p>
+            <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
+              enim veritatis perferendis atque itaque id. Repellendus, saepe
+              quae! Dolore ipsa consequuntur modi expedita distinctio, iste
+              alias labore voluptatum facilis! Corporis quo aliquam doloribus
+              suscipit quasi ad atque molestias iusto. Nam?
+            </span>
+          </p>
           <Link to="#">Read More</Link>
         </div>
 
@@ -175,6 +179,51 @@ const Home = () => {
           description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum placeat expedita eligendi. Libero, at molestiae!"
           image="./images/events.jpg"
         />
+
+        <hr />
+
+        <Events
+          date="11"
+          month="OCT,2021"
+          day="Monday"
+          title=" Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+          description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum placeat expedita eligendi. Libero, at molestiae!"
+          image="./images/events.jpg"
+        />
+
+        <hr />
+
+        <Events
+          date="11"
+          month="OCT,2021"
+          day="Monday"
+          title=" Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+          description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum placeat expedita eligendi. Libero, at molestiae!"
+          image="./images/events.jpg"
+        />
+      </div>
+
+      {/* Newsletter Section */}
+      <div className="newsletter">
+        <div className="newsletter-image">
+          <ContactMailIcon className="newsletter-icon" fontSize="large" />
+        </div>
+
+        <div className="newsletter-description">
+          <div className="newsletter-head">
+            <p>Signup for Newsletter</p>
+          </div>
+
+          <div className="newsletter-body">
+            <p>Subscribe now and receive weekly newsletter with new updates</p>
+          </div>
+        </div>
+
+        <div className="newsletter-submit">
+          <input type="email" placeholder="Enter your email..." />
+
+          <button> Submit </button>
+        </div>
       </div>
     </div>
   );

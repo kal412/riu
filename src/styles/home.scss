@@ -41,16 +41,16 @@
 }
 
 .container .content {
-  span{
+  span {
     background-color: rgba($offwhite, 0.5);
     color: $dark;
-    padding:0 0.5rem;
+    padding: 0 0.5rem;
   }
 }
 // Video Slider Text
 .content {
   z-index: 888;
-  color:$dark;
+  color: $dark;
   margin-top: 5rem;
   letter-spacing: 0.1rem;
 
@@ -62,7 +62,7 @@
     line-height: 7.5rem;
     margin-bottom: 1rem;
   }
-  
+
   h3 {
     font-size: 3.5rem;
     font-weight: 500;
@@ -80,7 +80,7 @@
   a {
     display: block;
     text-align: center;
-    background: rgba($offwhite,0.8);
+    background: rgba($offwhite, 0.8);
     padding: 1.5rem 2.5rem;
     width: 15rem;
     color: $dark;
@@ -90,8 +90,8 @@
     border-radius: 2px;
     transition: 0.3s ease;
 
-    &:hover{
-      background: rgba($primary,0.8);
+    &:hover {
+      background: rgba($primary, 0.8);
       color: $white;
     }
   }
@@ -106,7 +106,7 @@
   display: flex;
   flex-direction: column;
   transition: 0.5s ease;
-  color:$dark;
+  color: $dark;
 }
 
 .media-icons :not(:last-child) {
@@ -168,11 +168,12 @@
 
 // What We Do Section
 .whatWe-do {
-  background: white;
+  background: #e0e1dd;
   padding-top: 2rem;
 
   h1 {
     text-align: center;
+    color: $dark;
   }
 }
 
@@ -208,11 +209,12 @@
 // News Section
 .news {
   position: relative;
-  background: #fff;
+  background: #e0e1dd;
   padding-top: 2rem;
 
   h1 {
     text-align: center;
+    color: $dark;
   }
 }
 
@@ -234,6 +236,68 @@
 
   h1 {
     text-align: center;
+  }
+
+  hr {
+    border: 1px solid rgba($white, 0.5);
+    width: 90%;
+    margin-top: 3rem;
+  }
+}
+
+// Newsletter Section
+.newsletter {
+  background: #e0e1dd;
+  color: $dark;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.newsletter-image {
+  padding-top: 2rem;
+}
+
+.newsletter-icon {
+  transform: scale(2.5);
+}
+
+.newsletter-head {
+  p {
+    font-weight: bolder;
+    font-size: 2.4rem;
+    line-height: 4.2rem;
+  }
+}
+
+.newsletter-body {
+  p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    width: 80%;
+  }
+}
+
+.newsletter-submit {
+  input {
+    color: $dark;
+    background-color: $white;
+    padding: 2rem 10rem;
+    text-align: center;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+  }
+
+  button {
+    color: $white;
+    background-color: $dark;
+    padding: 2rem 4rem;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
   }
 }
 

@@ -8,19 +8,19 @@ const Events = ({ date, month, day, title, description, image }) => {
   return (
     <div className="events-card">
       <div className="datestamp">
-        <p>{date}</p>
-        <p>{month}</p>
-        <p>{day}</p>
+        <p className="date">{date}</p>
+        <p className="month">{month}</p>
+        <p className="day">{day}</p>
       </div>
 
       <div className="events-text">
-        <p>{title}</p>
-        <p>{description}</p>
+        <p className="title">{title}</p>
         <span>
-          <LocationOnIcon />
-          RIU <EventIcon />
+          <LocationOnIcon className="icons" />
+          RIU <EventIcon className="icons" />
           Events
         </span>
+        <p className="description">{description}</p>
         <Link to="#">Read More</Link>
       </div>
 
