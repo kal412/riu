@@ -30,6 +30,9 @@ a{
   text-align: center;
 }
 
+.padding-top{
+  padding-top: 1.5rem;
+}
 .container,
 .flex-container{
   display: flex;
@@ -49,6 +52,7 @@ a{
     margin:0.5rem 0;
     line-height: 1.8rem;
     text-align: justify;
+    overflow: auto;
   }
 
   ol{
@@ -65,13 +69,19 @@ a{
     border-left: 1rem solid $dark;
   }
 
-  .has-text-align-left{text-align: left}
-  .has-text-align-center{text-align: center}
-  .has-text-align-right{text-align: right}
-  .alignright{float: right;
-    overflow: auto;}
-  .alignleft{float: left;
-    overflow: auto;}
+  .has-text-align-left{
+        text-align: left;
+        
+  }
+  .has-text-align-center{
+      text-align: center;
+  }
+  .has-text-align-right{
+        text-align: right;
+      }
+
+  .alignright{float: right;}
+  .alignleft{float: left;}
   .aligncenter{
         display:block;
         margin:auto

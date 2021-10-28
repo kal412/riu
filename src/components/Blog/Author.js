@@ -9,6 +9,7 @@ const Author = () => {
         const fetchData = async () => {
             const response = await api.get( `users/1`)
             setAuthorDetails(response.data)
+            console.log("comp.author: ",response.data)
         }
         
         fetchData()

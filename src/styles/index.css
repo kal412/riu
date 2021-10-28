@@ -31,6 +31,10 @@ a {
   text-align: center;
 }
 
+.padding-top {
+  padding-top: 1.5rem;
+}
+
 .container,
 .flex-container {
   display: -webkit-box;
@@ -55,6 +59,7 @@ a {
   margin: 0.5rem 0;
   line-height: 1.8rem;
   text-align: justify;
+  overflow: auto;
 }
 
 .wp-content ol {
@@ -87,12 +92,10 @@ a {
 
 .wp-content .alignright {
   float: right;
-  overflow: auto;
 }
 
 .wp-content .alignleft {
   float: left;
-  overflow: auto;
 }
 
 .wp-content .aligncenter {
