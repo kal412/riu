@@ -10,7 +10,7 @@ $blog-bg:#7A5AED;
     padding:1rem 0;
 }
 .wrapper {
-    margin:0 0.5rem;
+    margin:0 0.5rem 4rem 0.5rem;
     &>h1{
         padding:1rem 0;
         color:#514F4F;
@@ -107,6 +107,16 @@ $blog-bg:#7A5AED;
     
 }
 
+.blog-container{
+    background-color: #514F4F;
+    width:max-content;
+    margin: auto;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    -webkit-box-shadow: 0.1rem 0.1rem 1rem 0 rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0.1rem 0.1rem 1rem 0 rgba(50, 50, 50, 0.75);
+    box-shadow:         0.1rem 0.1rem 1rem 0 rgba(50, 50, 50, 0.75);
+}
 .blog-header{
     display: flex;
     align-items: center;
@@ -114,8 +124,6 @@ $blog-bg:#7A5AED;
     margin: auto;
     padding:1rem;
     background-color: $blog-bg;
-    border-top-left-radius: 1.5rem;
-    border-top-right-radius: 1.5rem;
 
     &__feature-image{
         order:1;
