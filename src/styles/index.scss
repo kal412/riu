@@ -46,53 +46,7 @@ a{
 .push-to-top{
   margin-top: -8rem;
 }
-//WP content formatters
-.wp-content{
-  p{
-    margin:0.5rem 0;
-    line-height: 1.8rem;
-    text-align: justify;
-    overflow: auto;
-  }
 
-  ol{
-    list-style-type:decimal;
-  }
-  
-  ul{
-    list-style-type: disc;
-  }
-
-  h1,h2,h3,h4{margin-top: 1rem;}
-
-  blockquote{
-    border-left: 1rem solid $dark;
-  }
-
-  .has-text-align-left{
-        text-align: left;
-        
-  }
-  .has-text-align-center{
-      text-align: center;
-  }
-  .has-text-align-right{
-        text-align: right;
-      }
-
-  .alignright{float: right;}
-  .alignleft{float: left;}
-  .aligncenter{
-        display:block;
-        margin:auto
-      }
-
- 
-  //media formatters
-  img[class*="wp-image"]{ 
-                          margin:0.5rem;
-                      }
-}
 
 
 //for responsive design

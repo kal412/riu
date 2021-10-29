@@ -1,7 +1,7 @@
 import "../styles/blog.css"
 export const BlogCard = ({blogObject}) => {
 
-    const excerptLength = 260;
+    const excerptLength = 150;
     const truncateString = (string = '', maxLength = 50) => 
   string.length > maxLength 
     ? `${string.substring(0, maxLength)}<b>....</b>`

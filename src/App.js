@@ -1,4 +1,5 @@
 import Header from './components/Header'
+import Footer from './components/Footer'
 import Blog from "./views/Blog";
 import Home from "./views/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -14,6 +15,7 @@ function App() {
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/blog/:id" component={BlogContent} />
         </Switch>
+        <Footer/>
       </div>
     </Router>
   );

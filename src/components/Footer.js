@@ -6,6 +6,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GoogleIcon from "@mui/icons-material/Google";
+import "../styles/footer.css"
 
 const Footer = () => {
   return (
@@ -40,27 +41,27 @@ const Footer = () => {
         </div>
 
         <div className="footer-about">
-          <p>About RIU</p>
+          <h4>About RIU</h4>
           <Link to="#">Lorem Ipsum</Link>
           <Link to="#">Lorem Ipsum</Link>
           <Link to="#">Lorem Ipsum</Link>
         </div>
 
         <div className="footer-projects">
-          <p>Projects</p>
+          <h4>Projects</h4>
           <Link to="#">Lorem Ipsum</Link>
           <Link to="#">Lorem Ipsum</Link>
         </div>
 
         <div className="footer-news">
-          <p>News</p>
+          <h4>News</h4>
           <Link to="#">Lorem Ipsum</Link>
           <Link to="#">Lorem Ipsum</Link>
           <Link to="#">Lorem Ipsum</Link>
         </div>
 
         <div className="footer-links">
-          <p>Quick Links</p>
+          <h4>Quick Links</h4>
           <Link to="#">Lorem Ipsum</Link>
           <Link to="#">Lorem Ipsum</Link>
         </div>
