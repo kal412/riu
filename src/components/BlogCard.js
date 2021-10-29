@@ -11,7 +11,7 @@ export const BlogCard = ({blogObject}) => {
     return (
         <div className="blog-card">
             <div className="blog-card__feature-image">
-                <img src={blogObject.acf.image.url} alt={blogObject.title.rendered}/>
+                <img src={blogObject.acf.feature_image.url} alt={blogObject.title.rendered}/>
             </div>
 
             <div className="blog-card__body">     

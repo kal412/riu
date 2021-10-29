@@ -13,7 +13,7 @@ const Blog = () => {
   useEffect(() => {
     const fetchAllBlogs = async () => {
       try {
-        const response = await api.get("blog-posts");
+        const response = await api.get("posts");
         setBlogs(response.data);
       } catch (err) {}
     };
@@ -27,7 +27,7 @@ const Blog = () => {
  else
     return (
         <div className="blog">
-            <div class="flex-container">
+            <div className="flex-container">
                 {blogs.map((item) => (
                 <Link key={item.id} to={`/blog/${item.id}`}>
                     <BlogCard blogObject={item} />
