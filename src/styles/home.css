@@ -370,8 +370,8 @@
   background-color: #092866;
 }
 
-@media (max-width: 1040px) {
-  .home {
+@media (max-width: 680px) {
+  .carousel-container {
     padding: 10rem 2rem;
   }
   .media-icons {

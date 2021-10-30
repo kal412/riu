@@ -22,7 +22,6 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  
 
   video {
     z-index: 000;
@@ -315,8 +314,8 @@
 }
 
 // Responsive Media Queries
-@media (max-width: 1040px) {
-  .home {
+@media (max-width: $mobile) {
+  .carousel-container {
     padding: 10rem 2rem;
   }
 

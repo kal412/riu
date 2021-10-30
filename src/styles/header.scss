@@ -37,10 +37,11 @@
   transition: 0.3s ease;
 }
 
-.header__options a:before ,.header__options a:after {
+.header__options a:before,
+.header__options a:after {
   content: "";
   position: absolute;
-  background: rgba($primary,0.5);
+  background: rgba($primary, 0.5);
   width: 0;
   height: 0.2rem;
   transition: 0.3s ease;
@@ -55,7 +56,8 @@
   right: 0;
 }
 
-.header__options a:hover:before,.header__options a:hover:after {
+.header__options a:hover:before,
+.header__options a:hover:after {
   width: 100%;
 }
 
@@ -63,7 +65,7 @@
   display: none;
 }
 
-@media (max-width: 1040px) {
+@media (max-width: $tablet) {
   .header {
     padding: 1.2rem 2rem;
   }
