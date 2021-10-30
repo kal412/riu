@@ -250,6 +250,7 @@
   background: #e0e1dd;
   color: $dark;
   padding-top: 3rem;
+  padding-bottom: 3rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -292,12 +293,17 @@
   }
 
   button {
+    cursor: pointer;
     color: $white;
     background-color: $dark;
     padding: 2rem 4rem;
     text-align: center;
     text-transform: uppercase;
     border: none;
+
+    &:hover {
+      background-color: $primary;
+    }
   }
 }
 

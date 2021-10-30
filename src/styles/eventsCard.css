@@ -68,6 +68,8 @@
 }
 
 .events-text a {
+  position: relative;
+  display: inline-block;
   text-align: center;
   background: #9ca0a5;
   color: white;
@@ -78,6 +80,25 @@
   font-weight: 500;
   text-decoration: none;
   border-radius: 2px;
+}
+
+.events-text a::before {
+  display: block;
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0 99%, 0 0);
+          clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0 99%, 0 0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.events-text a:hover::before {
+  width: 100%;
 }
 
 .events-image > img {

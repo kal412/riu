@@ -1,3 +1,5 @@
+@import "../styles/variable";
+
 .button a {
   text-align: center;
   background: #778da9;
@@ -8,4 +10,10 @@
   font-weight: 500;
   text-decoration: none;
   border-radius: 2px;
+
+  &:hover {
+    color: $primary;
+    background: $offwhite;
+    border: 0.1rem solid $primary;
+  }
 }
