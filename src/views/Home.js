@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <div className="home push-to-top">
       {/* Video Slider */}
-      <div className="container container-flex-column">
+      <div className="carousel-container">
         {dataSlider.map((obj, index) => {
           return (
             <video

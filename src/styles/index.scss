@@ -22,6 +22,10 @@ a{
           box-sizing: border-box;
 }
 
+.body{
+  min-height: 60vh;
+}
+
 .title-font{ 
   font-family: $title-font;
 }
@@ -42,11 +46,17 @@ a{
   justify-content: space-evenly;
 }
 
-
+.row{
+  width:100%;
+}
 .push-to-top{
   margin-top: -8rem;
 }
 
+//colors
+.offwhite-bg{
+  background-color: $offwhite;
+}
 
 
 //for responsive design

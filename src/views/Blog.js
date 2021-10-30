@@ -1,9 +1,11 @@
 import "../styles/blog.css";
+import ViewHeader from "../components/ViewHeader";
 import BlogCard from "../components/BlogCard";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import api from "../axios";
 import {EllipsisSpinner} from '../components/LoadingSpinners'
+
 const Blog = () => {
 
 //state declarations
@@ -26,7 +28,9 @@ const Blog = () => {
     )
  else
     return (
-        <div className="blog">
+      <React.Fragment>
+        <ViewHeader title="Blog"/>
+        <div className="wrapper blog">
             <div className="flex-container">
                 {blogs.map((item) => (
                 <Link key={item.id} to={`/blog/${item.id}`}>
@@ -35,6 +39,7 @@ const Blog = () => {
                 ))}
             </div>
         </div>
+      </React.Fragment>
   );
 };
 

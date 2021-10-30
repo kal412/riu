@@ -2,7 +2,7 @@ import '../styles/spinners.css'
 
 export const EllipsisSpinner = () => {
     return (
-        <div className="container container-fluid">
+        <div className="spinner-container">
             <div className="lds-ellipsis">
                 <div></div><div></div><div></div><div></div>
             </div>

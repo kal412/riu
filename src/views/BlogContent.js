@@ -22,7 +22,7 @@ const BlogContent = ({ match }) => {
   if (blogData == null) return <EllipsisSpinner />;
   else
     return (
-      <div className="wrapper">
+      <div className="body wrapper">
         <h1>Blog</h1>
 
         {/* main blog content body */}

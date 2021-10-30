@@ -35,21 +35,6 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4>About RIU</h4>
-          <ul>
-            <li>
-              <Link to="#">Lorem Ipsum</Link>
-            </li>
-            <li>
-              <Link to="#">Lorem Ipsum</Link>
-            </li>
-            <li>
-              <Link to="#">Lorem Ipsum</Link>
-            </li>
-          </ul>
-        </div>
-
-        <div>
           <h4>Projects</h4>
           <ul>
             <li>
@@ -80,10 +65,19 @@ const Footer = () => {
           <h4>Quick Links</h4>
           <ul>
             <li>
-              <Link to="#">Lorem Ipsum</Link>
+              <Link to="#">Home</Link>
             </li>
             <li>
-              <Link to="#">Lorem Ipsum</Link>
+              <Link to="#">Projects</Link>
+            </li>
+            <li>
+              <Link to="#">News</Link>
+            </li>
+            <li>
+              <Link to="#">Vaccancy</Link>
+            </li>
+            <li>
+              <Link to="#">About Us</Link>
             </li>
           </ul>
         </div>

@@ -23,6 +23,10 @@ a {
   box-sizing: border-box;
 }
 
+.body {
+  min-height: 60vh;
+}
+
 .title-font {
   font-family: "Playfair Display", serif;
 }
@@ -51,8 +55,16 @@ a {
           justify-content: space-evenly;
 }
 
+.row {
+  width: 100%;
+}
+
 .push-to-top {
   margin-top: -8rem;
+}
+
+.offwhite-bg {
+  background-color: #eeeeee;
 }
 
 @media (max-width: 680px) {

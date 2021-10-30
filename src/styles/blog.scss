@@ -19,6 +19,10 @@ $blog-bg:#7A5AED;
     }
 
 }
+
+.blog{
+    padding-top: 3rem;
+}
 .blog-card{ 
     position: relative;
     background-color: $white;
@@ -107,9 +111,10 @@ $blog-bg:#7A5AED;
     
 }
 
+//blog content page
 .blog-container{
     background-color: #514F4F;
-    width:max-content;
+    max-width: 95rem;
     margin: auto;
     border-radius: 1.5rem;
     overflow: hidden;
@@ -120,7 +125,6 @@ $blog-bg:#7A5AED;
 .blog-header{
     display: flex;
     align-items: center;
-    max-width: 95rem;
     margin: auto;
     padding:1rem;
     background-color: $blog-bg;
@@ -160,7 +164,6 @@ $blog-bg:#7A5AED;
     
 }
 .blog-content{
-    max-width: 95rem;
     margin:auto;
     display: flex;
     flex-direction: column;
@@ -224,19 +227,19 @@ $blog-bg:#7A5AED;
   
 
 @media (max-width:$mobile) {
-    .blog-card{
-        width: 85vw;
-        height:40rem;
+    // .blog-card{
+    //     width: 85vw;
+    //     height:40rem;
 
-        &__feature-image{
+    //     &__feature-image{
 
-            img{
-                width: 100%;
-                height: 20rem;
-                object-fit: cover;
-            }
-        }
-    }
+    //         img{
+    //             width: 100%;
+    //             height: 20rem;
+    //             object-fit: cover;
+    //         }
+    //     }
+    // }
 
     .blog-header{
        display: block;

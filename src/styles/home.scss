@@ -12,11 +12,17 @@
 .container-flex-column {
   flex-direction: column;
 }
-.container {
+.carousel-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
   padding: 10rem 20rem;
   position: relative;
   width: 100%;
   min-height: 100vh;
+  
 
   video {
     z-index: 000;
@@ -29,7 +35,7 @@
   }
 }
 
-.container:before {
+.carousel-container:before {
   z-index: 777;
   content: "";
   position: absolute;
@@ -40,7 +46,7 @@
   left: 0;
 }
 
-.container .content {
+.carousel-container .content {
   span {
     background-color: rgba($offwhite, 0.5);
     color: $dark;
@@ -53,6 +59,7 @@
   color: $dark;
   margin-top: 5rem;
   letter-spacing: 0.1rem;
+  position: relative;
 
   h1 {
     font-size: 5.2rem;
@@ -169,7 +176,7 @@
 // What We Do Section
 .whatWe-do {
   background: #e0e1dd;
-  padding-top: 2rem;
+  padding: 2rem 8rem;
 
   h1 {
     text-align: center;
