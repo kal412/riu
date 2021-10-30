@@ -8,7 +8,6 @@ $view-header-height:25rem;
     position: relative;
     width:100%;
     height:$view-header-height;
-    margin-top: -8rem;
     clip-path: polygon(50% 0%, 100% 0, 100% 65%, 0 100%, 0 0);
 
     img.view-header__image{
@@ -29,7 +28,8 @@ $view-header-height:25rem;
         left:0;
         bottom:0;
         right:0;
-        background-color: rgba($primary,0.5);
+        background-color: rgba($primary,0.4);
+        filter: blur(2rem);
         z-index: 5;
 
     }
@@ -40,7 +40,7 @@ $view-header-height:25rem;
         color:rgba($offwhite,0.9);
         position: absolute;
         left:50%;
-        top:50%;
+        top:40%;
         transform:translate(-50%,-50%);
         text-shadow: 0.1rem 0.1rem 1rem $dark;
         font-family: $title-font;
