@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/workCard.css";
 
 const Work = ({ image, title, description }) => {
@@ -12,7 +13,7 @@ const Work = ({ image, title, description }) => {
           <p>{description}</p>
         </div>
 
-        <button className="view-project">View Project</button>
+        <Link to="#">View Project</Link>
       </div>
 
       <div className="work-card__image">

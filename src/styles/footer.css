@@ -3,7 +3,7 @@
 .footer {
   background-color: #242424;
   padding: 2rem 1rem;
-  color: #eeeeee;
+  color: rgba(238, 238, 238, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,13 +14,11 @@
 }
 
 .footer a {
-  color: white;
+  color: rgba(238, 238, 238, 0.5);
 }
 
-.footer-bottom {
-  border-top: 0.1rem solid grey;
-  padding-top: 2rem;
-  text-align: center;
+.footer a:hover {
+  color: white;
 }
 
 .footer-top {
@@ -29,6 +27,13 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .footer-top > div {
@@ -39,6 +44,49 @@
 .footer-top > div > h4 {
   border-bottom: 0.1rem solid rgba(110, 110, 110, 0.603);
   padding-bottom: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer-top > div li:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.footer-head .footer_logo {
+  margin-bottom: 2rem;
+}
+
+.footer-head > p:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.footer-head > p:last-child {
+  margin-bottom: 3.5rem;
+}
+
+.footer-bottom {
+  border-top: 0.1rem solid grey;
+  padding: 2rem 4rem 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-icons a:not(:last-child) {
+  margin-right: 1.5rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.footer-icons a > *:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 /*# sourceMappingURL=footer.css.map */

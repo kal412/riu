@@ -292,6 +292,7 @@
   background: #e0e1dd;
   color: #242424;
   padding-top: 3rem;
+  padding-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,12 +341,17 @@
 }
 
 .newsletter-submit button {
+  cursor: pointer;
   color: white;
   background-color: #242424;
   padding: 2rem 4rem;
   text-align: center;
   text-transform: uppercase;
   border: none;
+}
+
+.newsletter-submit button:hover {
+  background-color: #092866;
 }
 
 @media (max-width: 1040px) {
