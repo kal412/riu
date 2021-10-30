@@ -33,3 +33,13 @@
   object-fit: cover;
   margin-bottom: 1rem;
 }
+
+@media (max-width: $mobile) {
+  .card {
+    max-height: 30rem;
+
+    .card-description {
+      width: 100%;
+    }
+  }
+}

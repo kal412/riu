@@ -43,4 +43,13 @@
      object-fit: cover;
   margin-bottom: 1rem;
 }
+
+@media (max-width: 680px) {
+  .card {
+    max-height: 30rem;
+  }
+  .card .card-description {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=whatWeDoCard.css.map */

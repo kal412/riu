@@ -111,7 +111,6 @@
   top: 28rem;
   display: flex;
   flex-direction: column;
-  transition: 0.5s ease;
   color: $dark;
 }
 
@@ -120,7 +119,7 @@
 }
 
 .media-icons :hover {
-  transform: translateY(-1.5px);
+  color: $white;
 }
 
 // Video Slider Dots
@@ -185,6 +184,7 @@
 
 .whatWe-do__row {
   display: flex;
+  justify-content: space-evenly;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -216,7 +216,7 @@
 .news {
   position: relative;
   background: #e0e1dd;
-  padding-top: 2rem;
+  padding-top: 3rem;
 
   h1 {
     text-align: center;
@@ -321,5 +321,14 @@
 
   .media-icons {
     right: 1.5rem;
+  }
+
+  .whatWe-do {
+    background: #e0e1dd;
+    padding: 2rem 2rem;
+  }
+
+  .view-button {
+    right: 1rem;
   }
 }

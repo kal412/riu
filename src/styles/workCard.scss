@@ -79,3 +79,28 @@
     }
   }
 }
+
+@media (max-width: $mobile) {
+  .work-card {
+    width: 40rem;
+  }
+
+  .work-card__image > img {
+    width: 10rem;
+    height: 15rem;
+  }
+
+  .work-card__title {
+    padding: 1rem 4rem;
+  }
+
+  .work-card__description {
+    padding-left: 4rem;
+    width: 85%;
+  }
+
+  .work-card__text > a {
+    margin-top: 2rem;
+    margin-left: 4rem;
+  }
+}
