@@ -31,10 +31,21 @@ const Header = () => {
 
       <div className={showMenu ? "header__nav active" : "header__nav"}>
         <div className="header__options">
-          <Link to="/">Home</Link>
           <NavLink exact={true} to="/" activeClassName="nav-active">
-          Home
-        </NavLink>
+                Home
+          </NavLink>
+          <NavLink exact={true} to="#" activeClassName="nav-active">
+                Projects
+          </NavLink>
+          <NavLink exact={true} to="#" activeClassName="nav-active">
+                News
+          </NavLink>
+          <NavLink exact={true} to="#events" activeClassName="nav-active">
+               Events
+          </NavLink>
+          <NavLink exact={true} to="/" activeClassName="nav-active">
+                Home
+          </NavLink>
 
           <Link to="#">Projects</Link>
 
