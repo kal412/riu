@@ -47,9 +47,10 @@
 
 .carousel-container .content {
   span {
-    background-color: rgba($offwhite, 0.5);
-    color: $dark;
-    padding: 0 0.5rem;
+    //background-color: rgba($offwhite, 0.5);
+    color: $offwhite;
+    text-shadow: 0 0.1rem 1rem #000;
+  //  padding: 0 0.5rem;
   }
 }
 // Video Slider Text

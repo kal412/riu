@@ -67,9 +67,8 @@
 }
 
 .carousel-container .content span {
-  background-color: rgba(238, 238, 238, 0.5);
-  color: #242424;
-  padding: 0 0.5rem;
+  color: #eeeeee;
+  text-shadow: 0 0.1rem 1rem #000;
 }
 
 .content {
