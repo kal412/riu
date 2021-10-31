@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 import { useState } from "react";
 import "../styles/header.css";
 
@@ -21,6 +21,8 @@ const Header = () => {
 
   return (
     <div className={header ? "header active" : "header"}>
+
+      <div className="header-inner">
       <Link to="#">
         <img className="header_logo" src={"./images/logo-small.png"} alt="logo" />
       </Link>
@@ -30,6 +32,9 @@ const Header = () => {
       <div className={showMenu ? "header__nav active" : "header__nav"}>
         <div className="header__options">
           <Link to="/">Home</Link>
+          <NavLink exact={true} to="/" activeClassName="nav-active">
+          Home
+        </NavLink>
 
           <Link to="#">Projects</Link>
 
@@ -54,9 +59,10 @@ const Header = () => {
       </div>
 
       <div className="hamburger-menu">
-        <Link to="#" onClick={() => setShowMenu(!showMenu)}>
-          <MenuIcon fontSize="large" />
-        </Link>
+          <MenuIcon fontSize="large" onClick={() => setShowMenu(!showMenu)}/>
+      </div>
+      
+
       </div>
     </div>
   );

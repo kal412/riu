@@ -15,6 +15,7 @@
       -ms-flex-align: center;
           align-items: center;
   margin-top: 3rem;
+  padding: 0 1rem;
 }
 
 .datestamp {
@@ -59,12 +60,14 @@
   line-height: 1.6rem;
 }
 
-.events-text span {
-  margin-bottom: 3rem;
+.events-text .event-text__location {
+  margin: 1rem 0;
 }
 
 .events-text .icons {
-  color: #242424;
+  color: #9ca0a5;
+  vertical-align: bottom;
+  margin: 0 0.5rem;
 }
 
 .events-text a {
@@ -106,5 +109,52 @@
   height: 25rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (max-width: 680px) {
+  .events-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .events-card > div {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  .events-card .events-image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .events-card .datestamp {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .events-card .datestamp div {
+    margin: 0 0.5rem;
+    font-size: 1.6rem;
+  }
+  .events-card .events-text {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    padding: 0 1.5rem;
+  }
+  .events-card .events-text a {
+    display: block;
+    margin: 2rem auto auto auto;
+  }
 }
 /*# sourceMappingURL=eventsCard.css.map */

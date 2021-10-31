@@ -46,6 +46,10 @@ a{
   justify-content: space-evenly;
 }
 
+.not-fluid{
+  max-width: 100rem;
+  margin:auto;
+}
 .row{
   width:100%;
 }

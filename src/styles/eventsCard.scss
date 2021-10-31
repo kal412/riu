@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
+  padding: 0 1rem;
 }
 
 .datestamp {
@@ -42,12 +43,14 @@
     line-height: 1.6rem;
   }
 
-  span {
-    margin-bottom: 3rem;
+  .event-text__location {
+    margin: 1rem 0;
   }
 
   .icons {
-    color: $dark;
+    color: $tertiary;
+    vertical-align: bottom;
+    margin: 0 0.5rem;
   }
 
   a {
@@ -87,4 +90,42 @@
   width: 20em;
   height: 25rem;
   object-fit: cover;
+}
+
+@media (max-width:$mobile) {
+  .events-card{
+    flex-direction: column;
+
+    &>div{
+      width: 100%;
+      margin: 0;
+      text-align: center;
+    }
+
+    .events-image{
+      order:1
+    }
+
+    .datestamp{
+      order:2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & div{
+        margin:0 0.5rem ;
+        font-size: 1.6rem;
+      }
+    }
+
+    .events-text{
+      order:3;
+      padding:0 1.5rem ;
+
+      a{
+        display: block;
+        margin: 2rem auto auto auto;
+      }
+    }
+  }
 }

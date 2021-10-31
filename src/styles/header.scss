@@ -1,22 +1,29 @@
 @import "./variable.scss";
 
+
 .header {
   height: 8rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: sticky;
   background-color: rgba($offwhite, 0.7);
   top: 0;
   left: 0;
-  width: 100%;
-  padding: 1.5rem 20rem;
   z-index: 999;
   transition: 0.5s ease;
+
+  .header-inner{
+    max-width:100rem;
+    height: 100%;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
 }
 
 .header.active {
   background: white;
+  border-bottom: 0.1rem solid rgba(156, 156, 156, 0.3);
 }
 
 .header__nav {
@@ -57,13 +64,21 @@
 }
 
 .header__options a:hover:before,
-.header__options a:hover:after {
-  width: 100%;
-}
+  .header__options a:hover:after {
+    width: 100%;
+  }
+
+  a.nav-active::before,
+  a.nav-active::after{
+        width: 100%;
+      }
+
 
 .hamburger-menu {
   display: none;
+  cursor: pointer;
 }
+
 
 @media (max-width: $tablet) {
   .header {
@@ -114,9 +129,12 @@
 
   .hamburger-menu {
     display: block;
+
   }
 
   .header__options a:before ,.header__options a:after {
     background: rgba($dark,0.5);
   }
+
+ 
 }

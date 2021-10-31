@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 .button a {
   text-align: center;
-  background: #778da9;
+  background-color: rgba(107, 136, 172, 0.5);
   padding: 0.5rem 1.5rem;
   width: 10rem;
   color: #fff;

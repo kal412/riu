@@ -1,8 +1,8 @@
 import "../styles/home.css";
-import dataSlider from "../components/dataSlider";
-import Card from "../components/whatWeDoCard";
-import Work from "../components/workCard";
-import Button from "../components/viewAllButton";
+import dataSlider from "../components/DataSlider";
+import Card from "../components/WhatWeDoCard";
+import Work from "../components/WorkCard";
+import Button from "../components/ViewAllButton";
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -12,8 +12,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 
-import News from "../components/newsCard";
-import Events from "../components/eventsCard";
+import News from "../components/NewsCard";
+import Events from "../components/EventsCard";
 
 const Home = () => {
   const [slideIndex, setSlideIndex] = useState(1);
@@ -45,21 +45,21 @@ const Home = () => {
 
         <div className="content">
           <h1>
-            <span>RIU</span>
+           RIU
           </h1>
           <h3>
-            <span>Research and Innovation Unit</span>
+            Research and Innovation Unit
           </h3>
           <p>
-            <span>
+            
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
               enim veritatis perferendis atque itaque id. Repellendus, saepe
               quae! Dolore ipsa consequuntur modi expedita distinctio, iste
               alias labore voluptatum facilis! Corporis quo aliquam doloribus
               suscipit quasi ad atque molestias iusto. Nam?
-            </span>
+            
           </p>
-          <Link to="#">Read More</Link>
+          <Link to="/about-us">Read More</Link>
         </div>
 
         <div className="media-icons">
@@ -81,14 +81,14 @@ const Home = () => {
       </div>
 
       {/* What We Do Section */}
-      <div className="whatWe-do">
+      <div className="what-we-do">
         <h1>What We Do</h1>
 
-        <div className="whatWe-do__row">
+        <div className="flex-container not-fluid">
           <Card
             image="./images/research.jpg"
             title="Lorem, ipsum."
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas asperiores laudantium minima, similique sunt!"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit.ipsum dolor sit amet consectetur adipisicing elit.. Repellendus quas asperiores laudantium minima, similique sunt!"
           />
           <Card
             image="./images/research.jpg"
@@ -100,9 +100,7 @@ const Home = () => {
             title="Lorem, ipsum."
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas asperiores laudantium minima, similique sunt!"
           />
-        </div>
-
-        <div className="whatWe-do__row">
+ 
           <Card
             image="./images/research.jpg"
             title="Lorem, ipsum."
@@ -123,7 +121,7 @@ const Home = () => {
 
       {/* Our Work Section */}
       <div className="our-work">
-        <h1>Our Latest Works</h1>
+        <h1 class="title-font">Our Latest Works</h1>
 
         <div className="view-button">
           <Button />
@@ -156,7 +154,7 @@ const Home = () => {
           <Button />
         </div>
 
-        <div className="news-row">
+        <div className="flex-container">
           <News title="Lorem ipsum dolor sit." image="./images/news.jpg" />
           <News title="Lorem ipsum dolor sit." image="./images/news.jpg" />
           <News title="Lorem ipsum dolor sit." image="./images/news.jpg" />
@@ -173,7 +171,7 @@ const Home = () => {
 
         <Events
           date="11"
-          month="OCT,2021"
+          month="OCT 2021"
           day="Monday"
           title=" Lorem ipsum dolor sit amet, consectetur adipisicing elit."
           description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum placeat expedita eligendi. Libero, at molestiae!"
@@ -205,25 +203,22 @@ const Home = () => {
 
       {/* Newsletter Section */}
       <div className="newsletter">
+        
+      <div className="newsletter-description">
         <div className="newsletter-image">
           <ContactMailIcon className="newsletter-icon" fontSize="large" />
         </div>
 
-        <div className="newsletter-description">
-          <div className="newsletter-head">
-            <p>Signup for Newsletter</p>
-          </div>
-
-          <div className="newsletter-body">
+        <div className="newsletter-text">
+            <h2>Signup for Newsletter</h2>
             <p>Subscribe now and receive weekly newsletter with new updates</p>
-          </div>
-        </div>
 
-        <div className="newsletter-submit">
+        </div>
+            </div>
+        <form className="newsletter-form">
           <input type="email" placeholder="Enter your email..." />
-
-          <button> Submit </button>
-        </div>
+          <input type="submit" value="Subscribe" />
+        </form>
       </div>
     </div>
   );
