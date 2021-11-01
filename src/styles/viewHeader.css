@@ -21,7 +21,7 @@
 }
 
 .view-header::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -46,6 +46,11 @@
   font-family: "Playfair Display", serif;
 }
 
+.view-header-clipless {
+  -webkit-clip-path: unset;
+          clip-path: unset;
+}
+
 @media (max-width: 680px) {
   .view-header {
     height: 25rem;
@@ -54,6 +59,10 @@
   }
   .view-header img.view-header__image {
     height: 25rem;
+  }
+  .view-header-clipless {
+    -webkit-clip-path: unset;
+            clip-path: unset;
   }
 }
 /*# sourceMappingURL=viewHeader.css.map */
