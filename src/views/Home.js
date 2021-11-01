@@ -39,7 +39,7 @@ const Home = () => {
   }, []);
 
 
-  
+
   return (
     <div className="home push-to-top">
       {/* Video Slider */}
