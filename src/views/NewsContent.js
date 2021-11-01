@@ -12,7 +12,7 @@ const BlogContent = ({ match }) => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await api.get(`posts/${match.params.id}`);
+        const response = await api.get(`news/${match.params.id}`);
         setBlogData(response.data);
         //console.log(response.data)
       } catch (err) {}
@@ -24,21 +24,25 @@ const BlogContent = ({ match }) => {
   else
     return (
       <div className="body wrapper">
-          <div className="header-container">
-             <ViewHeader title={blogData.title.rendered} isClipless={true} bgImageURL={blogData.acf.feature_image.url}/>
-             <div className="header-container__author">
-              <Author  authorId={blogData.author} />
-             </div> 
+        <div className="header-container">
+           <ViewHeader title={blogData.title.rendered} isClipless={true} bgImageURL={blogData.acf.feature_image.url}/>
+          <div className="header-container__author">
+             <Author  authorId={blogData.author} />
+          </div> 
         </div>
+        <div className="blog-container">
+
+
 
           {/* blog content */}
-          <div className="flex-container flex-column not-fluid">
+          <div className="blog-content">
             <div
               className="blog-content__data wp-content"
               dangerouslySetInnerHTML={{ __html: blogData.content.rendered }}
             ></div>
           </div>
         </div>
+      </div>
     );
 };
 

@@ -1,10 +1,11 @@
 import "../styles/home.css";
+import api from '../axios';
 import dataSlider from "../components/DataSlider";
 import Card from "../components/WhatWeDoCard";
 import Work from "../components/WorkCard";
 import Button from "../components/ViewAllButton";
 
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import { Link } from "react-router-dom";
 
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -14,14 +15,31 @@ import ContactMailIcon from "@mui/icons-material/ContactMail";
 
 import News from "../components/NewsCard";
 import Events from "../components/EventsCard";
+import { EllipsisSpinner } from "../components/LoadingSpinners";
 
 const Home = () => {
+  // variable declaration
   const [slideIndex, setSlideIndex] = useState(1);
+  const [projects, setProjects] = useState(null);
 
   const moveDot = (index) => {
     setSlideIndex(index);
   };
 
+
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await api.get(`projects?per_page=3`);
+        setProjects(response.data)
+      } catch (err) {}
+    };
+    fetchProjects();
+  }, []);
+
+
+  
   return (
     <div className="home push-to-top">
       {/* Video Slider */}
@@ -121,29 +139,24 @@ const Home = () => {
 
       {/* Our Work Section */}
       <div className="our-work">
-        <h1 class="title-font">Our Latest Works</h1>
+        <h1 class="title-font">Our Latest Projects</h1>
 
         <div className="view-button">
           <Button />
         </div>
 
-        <Work
-          title="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-          description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique rerum laudantium sequi eius esse! Hic, itaque a accusantium nulla ex quo repellendus dolorem aliquid quisquam eum veniam. Aliquid laboriosam vel similique nobis in veritatis unde commodi cupiditate voluptate ipsum vitae corrupti repellat mollitia, quos ullam reprehenderit fugiat deleniti fugit delectus."
-          image="./images/robot.jpg"
-        />
+        
+        {projects===null ? <EllipsisSpinner /> : projects.map((project,id)=>{
+             return (
+                      <Work key={id}
+                      id = {project.id}
+                      title= {project.title.rendered}
+                      description= {project.excerpt.rendered}
+                      image={project.acf.feature_image.url}
+                    />
+                    )
+    })}
 
-        <Work
-          title="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-          description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique rerum laudantium sequi eius esse! Hic, itaque a accusantium nulla ex quo repellendus dolorem aliquid quisquam eum veniam. Aliquid laboriosam vel similique nobis in veritatis unde commodi cupiditate voluptate ipsum vitae corrupti repellat mollitia, quos ullam reprehenderit fugiat deleniti fugit delectus."
-          image="./images/3dprint.jpg"
-        />
-
-        <Work
-          title="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-          description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique rerum laudantium sequi eius esse! Hic, itaque a accusantium nulla ex quo repellendus dolorem aliquid quisquam eum veniam. Aliquid laboriosam vel similique nobis in veritatis unde commodi cupiditate voluptate ipsum vitae corrupti repellat mollitia, quos ullam reprehenderit fugiat deleniti fugit delectus."
-          image="./images/robot.jpg"
-        />
       </div>
 
       {/* News Section */}

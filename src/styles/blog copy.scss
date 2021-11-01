@@ -2,7 +2,7 @@
 
 
 // variables
-$blog-bg:#7e6dbd;
+$blog-bg:#7A5AED;
 
 
 //helpers
@@ -19,20 +19,7 @@ $blog-bg:#7e6dbd;
     }
 
 }
-.header-container{
-    position: relative;
 
-
-    .header-container__author{
-       padding: 0 1rem;
-        width: max-content;
-        position: relative;
-        z-index: 8;
-        margin-left: auto;
-        margin-top:-6.8rem;
-
-    }
-}
 .blog{
     padding-top: 3rem;
 }
@@ -99,7 +86,6 @@ $blog-bg:#7e6dbd;
     margin-top: 0.5rem;
     text-align: center;     
     color:rgb(233, 233, 233);
-    text-shadow: 0.1rem 0.1rem 0.2rem $dark;
     display: flex;
     margin: auto;
 
@@ -129,28 +115,73 @@ $blog-bg:#7e6dbd;
 .blog-container{
     max-width: 95rem;
     margin: auto;
-    margin-top: 1rem;
+    // margin-top: -10rem;
     margin-bottom: 3rem;
     position: relative;
     z-index: 10;
     border-radius: 1.5rem;
+    overflow: hidden;
+    -webkit-box-shadow: 0.1rem 0.1rem 1rem 0 rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0.1rem 0.1rem 1rem 0 rgba(50, 50, 50, 0.75);
+    box-shadow:         0.1rem 0.1rem 1rem 0 rgba(50, 50, 50, 0.75);
+}
+.blog-header{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding:1rem;
+    background-color: $blog-bg;
+
+    &__feature-image{
+        order:1;
+        width:30%;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        img{ 
+        width:20rem;
+        border-radius: 1.5rem;
+        height:15rem;
+        object-fit: cover;
+        vertical-align: bottom;
+        }
+    }
+
+    &__info{
+        order:2;
+        width:40%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+        color:$white;
+        letter-spacing: 0.05rem;
+    }
+
+    &__author{
+        order:3;
+        width:30%;
+        display: flex;
+        justify-content: flex-end;
+    }
     
 }
-
 .blog-content{
     margin:auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
+    background-color: #E2DEF8;
+
+   
 
     &__data{
-        padding: 0 2rem;
+        padding: 0 4rem;
     }
 }
 //WP content formatters
 .wp-content{
-   
     p{
       margin:0.5rem 0;
       line-height: 1.8rem;
@@ -187,22 +218,14 @@ $blog-bg:#7e6dbd;
     .alignleft{float: left;}
     .aligncenter{
           display:block;
-          margin:auto;
+          margin:auto
         }
   
-
+   
     //media formatters
-    img[class*="size-full wp-image"]{ 
-                            width:95%;
-                            height: 95%;
-                        }
-    
-    
     img[class*="wp-image"]{ 
                             margin:0.5rem;
-                            
-        }
-
+                        }
   }
   
 

@@ -5,6 +5,10 @@ import Home from "./views/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import BlogContent from "./views/BlogContent";
 import AboutUs from './views/AboutUs';
+import News from './views/News';
+import NewsContent from './views/NewsContent';
+import Projects from './views/Projects';
+import ProjectsContent from './views/ProjectsContent';
 
 function App() {
   return (
@@ -16,6 +20,10 @@ function App() {
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/blog/:id" component={BlogContent} />
           <Route exact path="/about-us" component={AboutUs} />
+          <Route exact path="/news" component={News} />
+          <Route exact path="/news/:id" component={NewsContent} />
+          <Route exact path="/projects" component={Projects} />
+          <Route exact path="/projects/:id" component={ProjectsContent} />
         </Switch>
         <Footer/>
       </div>

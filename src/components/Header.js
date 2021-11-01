@@ -34,30 +34,23 @@ const Header = () => {
           <NavLink exact={true} to="/" activeClassName="nav-active">
                 Home
           </NavLink>
-          <NavLink exact={true} to="#" activeClassName="nav-active">
+          <NavLink  to="/projects" activeClassName="nav-active">
                 Projects
           </NavLink>
-          <NavLink exact={true} to="#" activeClassName="nav-active">
+          <NavLink to="/news" activeClassName="nav-active">
                 News
           </NavLink>
-          <NavLink exact={true} to="#events" activeClassName="nav-active">
+          <NavLink exact={true} to="/events" activeClassName="nav-active">
                Events
           </NavLink>
-          <NavLink exact={true} to="/" activeClassName="nav-active">
-                Home
+          <NavLink  to="/blog" activeClassName="nav-active">
+                Blog
+          </NavLink>
+          <NavLink exact={true} to="/about-us" activeClassName="nav-active">
+                About Us
           </NavLink>
 
-          <Link to="#">Projects</Link>
-
-          <Link to="#">News</Link>
-
-          <Link to="#">Events</Link>
-
-          <Link to="/blog">Blog</Link>
-
-          <Link to="#">Vacancy</Link>
-
-          <Link to="/about-us">About Us</Link>
+         
 
           <Link
             to="#"
