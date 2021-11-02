@@ -10,7 +10,8 @@ $blog-bg:#7e6dbd;
     padding:1rem 0;
 }
 .wrapper {
-    
+    max-width: 90%;
+    margin: auto;
     &>h1{
         padding:1rem 0;
         color:#514F4F;
@@ -24,12 +25,11 @@ $blog-bg:#7e6dbd;
 
 
     .header-container__author{
-       padding: 0 1rem;
-        width: max-content;
-        position: relative;
+        position: absolute;
+        bottom:0rem;
+        right:0rem;
         z-index: 8;
-        margin-left: auto;
-        margin-top:-6.8rem;
+        
 
     }
 }
@@ -39,7 +39,7 @@ $blog-bg:#7e6dbd;
 .blog-card{ 
     position: relative;
     background-color: $white;
-    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
+    box-shadow:  $card-shadow;
     border-radius: 2rem;
     width:30rem;
     height: 40rem;
@@ -48,7 +48,7 @@ $blog-bg:#7e6dbd;
     transition: all 0.3s ease-in;
 
     &:hover{
-        box-shadow: 0 1rem 1rem 0.4rem rgba($primary, 0.5);
+        box-shadow: $card-shadow-hover;
     }
 
     h2{    
@@ -96,10 +96,12 @@ $blog-bg:#7e6dbd;
 }
 
 .author{
-    margin-top: 0.5rem;
+    padding: 0.5rem;
     text-align: center;     
-    color:rgb(233, 233, 233);
-    text-shadow: 0.1rem 0.1rem 0.2rem $dark;
+    color:rgb(247, 247, 247);
+    text-shadow: 0.1rem 0.1rem 0rem $dark;
+    background-color: #3131314f;
+    
     display: flex;
     margin: auto;
 
@@ -187,7 +189,6 @@ $blog-bg:#7e6dbd;
     .alignleft{float: left;}
     .aligncenter{
           display:block;
-          margin:auto;
         }
   
 

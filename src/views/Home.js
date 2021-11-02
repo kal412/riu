@@ -1,11 +1,11 @@
 import "../styles/home.css";
-import api from '../axios';
+import api from "../axios";
 import dataSlider from "../components/DataSlider";
 import Card from "../components/WhatWeDoCard";
 import Work from "../components/WorkCard";
 import Button from "../components/ViewAllButton";
 
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -18,27 +18,42 @@ import Events from "../components/EventsCard";
 import { EllipsisSpinner } from "../components/LoadingSpinners";
 
 const Home = () => {
+
+  //after render scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   // variable declaration
   const [slideIndex, setSlideIndex] = useState(1);
   const [projects, setProjects] = useState(null);
+  const [news, setNews] = useState(null);
 
   const moveDot = (index) => {
     setSlideIndex(index);
   };
 
-
-
+  //fetch projects
   useEffect(() => {
     const fetchProjects = async () => {
       try {
         const response = await api.get(`projects?per_page=3`);
-        setProjects(response.data)
+        setProjects(response.data);
       } catch (err) {}
     };
     fetchProjects();
   }, []);
 
-
+  //fetch projects
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const response = await api.get(`news?per_page=3`);
+        setNews(response.data);
+      } catch (err) {}
+    };
+    fetchNews();
+  }, []);
 
   return (
     <div className="home push-to-top">
@@ -62,20 +77,14 @@ const Home = () => {
         })}
 
         <div className="content">
-          <h1>
-           RIU
-          </h1>
-          <h3>
-            Research and Innovation Unit
-          </h3>
+          <h1>RIU</h1>
+          <h3>Research and Innovation Unit</h3>
           <p>
-            
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
-              enim veritatis perferendis atque itaque id. Repellendus, saepe
-              quae! Dolore ipsa consequuntur modi expedita distinctio, iste
-              alias labore voluptatum facilis! Corporis quo aliquam doloribus
-              suscipit quasi ad atque molestias iusto. Nam?
-            
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
+            enim veritatis perferendis atque itaque id. Repellendus, saepe quae!
+            Dolore ipsa consequuntur modi expedita distinctio, iste alias labore
+            voluptatum facilis! Corporis quo aliquam doloribus suscipit quasi ad
+            atque molestias iusto. Nam?
           </p>
           <Link to="/about-us">Read More</Link>
         </div>
@@ -118,7 +127,7 @@ const Home = () => {
             title="Lorem, ipsum."
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas asperiores laudantium minima, similique sunt!"
           />
- 
+
           <Card
             image="./images/research.jpg"
             title="Lorem, ipsum."
@@ -145,18 +154,21 @@ const Home = () => {
           <Button />
         </div>
 
-        
-        {projects===null ? <EllipsisSpinner /> : projects.map((project,id)=>{
-             return (
-                      <Work key={id}
-                      id = {project.id}
-                      title= {project.title.rendered}
-                      description= {project.excerpt.rendered}
-                      image={project.acf.feature_image.url}
-                    />
-                    )
-    })}
-
+        {projects === null ? (
+          <EllipsisSpinner />
+        ) : (
+          projects.map((project, id) => {
+            return (
+              <Work
+                key={id}
+                id={project.id}
+                title={project.title.rendered}
+                description={project.excerpt.rendered}
+                image={project.acf.feature_image.url}
+              />
+            );
+          })
+        )}
       </div>
 
       {/* News Section */}
@@ -167,10 +179,27 @@ const Home = () => {
           <Button />
         </div>
 
-        <div className="flex-container">
+        <div className="flex-container dark-bg">
+          {news == null ? (
+            <EllipsisSpinner isNotWhite={true}/>
+          ) : (
+            news.map((news, id) => {
+              return (
+                <Link to={`news/${news.id}`}>
+                  <News
+                    key={id}
+                    id={news.id}
+                    title={news.title.rendered}
+                    description={news.excerpt.rendered}
+                    image={news.acf.feature_image.url}
+                  />
+                </Link>
+              );
+            })
+          )}
+          {/* <News title="Lorem ipsum dolor sit." image="./images/news.jpg" />
           <News title="Lorem ipsum dolor sit." image="./images/news.jpg" />
-          <News title="Lorem ipsum dolor sit." image="./images/news.jpg" />
-          <News title="Lorem ipsum dolor sit." image="./images/news.jpg" />
+          <News title="Lorem ipsum dolor sit." image="./images/news.jpg" /> */}
         </div>
       </div>
 
@@ -216,18 +245,16 @@ const Home = () => {
 
       {/* Newsletter Section */}
       <div className="newsletter">
-        
-      <div className="newsletter-description">
-        <div className="newsletter-image">
-          <ContactMailIcon className="newsletter-icon" fontSize="large" />
-        </div>
+        <div className="newsletter-description">
+          <div className="newsletter-image">
+            <ContactMailIcon className="newsletter-icon" fontSize="large" />
+          </div>
 
-        <div className="newsletter-text">
+          <div className="newsletter-text">
             <h2>Signup for Newsletter</h2>
             <p>Subscribe now and receive weekly newsletter with new updates</p>
-
+          </div>
         </div>
-            </div>
         <form className="newsletter-form">
           <input type="email" placeholder="Enter your email..." />
           <input type="submit" value="Subscribe" />

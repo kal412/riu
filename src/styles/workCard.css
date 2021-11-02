@@ -8,12 +8,12 @@
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  border-radius: 30px;
+  border-radius: 3rem;
   -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   background: white;
   margin: 0 6rem 4rem 6rem;
-  padding-bottom: 2rem;
+  padding: 2rem 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -66,18 +66,21 @@
   margin-right: -3.5rem;
 }
 
+.work-card__text {
+  padding: 0 2rem;
+}
+
 .work-card__text .work-card__title {
   font-weight: bold;
   font-size: 1.8rem;
-  padding: 8rem 3rem;
-  padding-bottom: 2rem;
+  padding: 3rem 1rem;
 }
 
 .work-card__text .work-card__description {
   padding-left: 3rem;
   font-size: 1.3rem;
   text-align: justify;
-  width: 70%;
+  width: 95%;
 }
 
 .work-card__text a {
@@ -140,6 +143,7 @@
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    margin-top: 0.5rem;
   }
   .work-card:nth-child(odd) .work-card__text .work-card__title, .work-card:nth-child(even) .work-card__text .work-card__title {
     font-weight: bold;

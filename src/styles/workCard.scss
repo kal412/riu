@@ -4,11 +4,11 @@
   display: flex;
   max-width: 80rem;
   height: max-content;
-  border-radius: 30px;
+  border-radius: 3rem;
   box-shadow: (0px 4px 20px rgba(0, 0, 0, 0.25));
   background: white;
   margin:0 6rem 4rem 6rem;
-  padding-bottom: 2rem;
+  padding: 2rem 0;
   transition: all 0.3s ease-in-out;
 
   &:hover {
@@ -48,19 +48,19 @@
 }
 
 .work-card__text {
+  padding:0 2rem;
 
   .work-card__title {
     font-weight: bold;
     font-size: 1.8rem;
-    padding: 8rem 3rem;
-    padding-bottom: 2rem;
+    padding:3rem 1rem;
   }
 
   .work-card__description {
     padding-left: 3rem;
     font-size: 1.3rem;
     text-align: justify;
-    width: 70%;
+    width: 95%;
   }
 
   a {
@@ -108,6 +108,7 @@
        
 .work-card__text {
     order:2;
+    margin-top:0.5rem;
 
   .work-card__title {
     font-weight: bold;

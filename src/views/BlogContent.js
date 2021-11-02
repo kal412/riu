@@ -6,6 +6,12 @@ import Author from "../components/Blog/Author";
 import ViewHeader from "../components/ViewHeader";
 
 const BlogContent = ({ match }) => {
+
+  //after render scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   //state declaration
   const [blogData, setBlogData] = useState(null);
 
@@ -27,7 +33,7 @@ const BlogContent = ({ match }) => {
           <div className="header-container">
              <ViewHeader title={blogData.title.rendered} isClipless={true} bgImageURL={blogData.acf.feature_image.url}/>
              <div className="header-container__author">
-              <Author  authorId={blogData.author} />
+              <Author  authorId={blogData.author} date={blogData.date} />
              </div> 
         </div>
 

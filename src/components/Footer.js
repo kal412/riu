@@ -85,7 +85,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="copyright">
-          <p>riu.acem.edu.np | &copy; 2021 pixelbyte, All Rights Reserved</p>
+          <p>riu.acem.edu.np | &copy; 2021, Developed by Aashish Rai and Kalyan Devkota</p>
         </div>
 
         <div className="footer-icons">

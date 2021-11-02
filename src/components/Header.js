@@ -9,6 +9,7 @@ const Header = () => {
   const [header, setHeader] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
+  //change header background
   const changeBackground = () => {
     if (window.scrollY >= 400) {
       setHeader(true);
@@ -16,6 +17,7 @@ const Header = () => {
       setHeader(false);
     }
   };
+
 
   window.addEventListener("scroll", changeBackground);
 
@@ -31,22 +33,22 @@ const Header = () => {
 
       <div className={showMenu ? "header__nav active" : "header__nav"}>
         <div className="header__options">
-          <NavLink exact={true} to="/" activeClassName="nav-active">
+          <NavLink exact={true} to="/" activeClassName="nav-active"   onClick={() => setShowMenu(false)}>
                 Home
           </NavLink>
-          <NavLink  to="/projects" activeClassName="nav-active">
+          <NavLink  to="/projects" activeClassName="nav-active" onClick={() => setShowMenu(false)}>
                 Projects
           </NavLink>
-          <NavLink to="/news" activeClassName="nav-active">
+          <NavLink to="/news" activeClassName="nav-active" onClick={() => setShowMenu(false)}>
                 News
           </NavLink>
-          <NavLink exact={true} to="/events" activeClassName="nav-active">
+          <NavLink to="/events" activeClassName="nav-active" onClick={() => setShowMenu(false)}>
                Events
           </NavLink>
-          <NavLink  to="/blog" activeClassName="nav-active">
+          <NavLink  to="/blog" activeClassName="nav-active" onClick={() => setShowMenu(false)}>
                 Blog
           </NavLink>
-          <NavLink exact={true} to="/about-us" activeClassName="nav-active">
+          <NavLink exact={true} to="/about-us" activeClassName="nav-active" onClick={() => setShowMenu(false)}>
                 About Us
           </NavLink>
 

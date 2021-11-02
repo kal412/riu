@@ -98,6 +98,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .descriptive-card:nth-child(even) .descriptive-image {
@@ -109,21 +115,20 @@
 }
 
 .descriptive-card .descriptive-image {
-  margin-left: 10rem;
-  margin-top: 6rem;
+  padding: 1rem;
   max-width: 50rem;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
   height: 30rem;
-}
-
-.descriptive-card .descriptive-image > img {
-  height: 30rem;
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .descriptive-card .descriptive-text {
-  padding: 0 10rem;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding: 1rem;
+  margin: 0 1rem;
 }
 
 .descriptive-card .descriptive-text h2 {
@@ -135,7 +140,6 @@
 .descriptive-card .descriptive-text p {
   font-size: 1.4rem;
   line-height: 3.2rem;
-  width: 90%;
   text-align: justify;
 }
 
@@ -156,8 +160,8 @@
   position: relative;
   border-radius: 1.5rem;
   background: rgba(255, 255, 255, 0.6);
-  -webkit-filter: grayscale(80%);
-          filter: grayscale(80%);
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   -webkit-box-shadow: 0.1rem 0.1rem 1rem 0 rgba(36, 36, 36, 0.4);
@@ -165,7 +169,7 @@
 }
 
 .team .team-card:hover {
-  background: linear-gradient(219.28deg, #c9cac4 14.61%, #606060 90.92%);
+  background: linear-gradient(219.28deg, #9aaab4 14.61%, #092866 90.92%);
   color: white;
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
@@ -235,6 +239,13 @@
   text-shadow: 0.1rem 0.1rem 0.1rem rgba(238, 238, 238, 0.4);
 }
 
+@media (max-width: 680px) {
+  .team .team-card .team-name-post h3,
+  .team .team-card .team-name-post p {
+    color: white;
+  }
+}
+
 .team .team-card .team-name-post h3 {
   font-size: 2.4rem;
 }
@@ -246,10 +257,10 @@
 .team .team-card .team-hover {
   position: absolute;
   top: 9rem;
-  left: 0.2rem;
+  left: 1rem;
 }
 
-.team .team-card .team-hover .on-hover {
+.team .team-card .on-hover {
   display: none;
   width: 40%;
   padding-left: 0.5rem;
@@ -260,6 +271,27 @@
     margin-left: 1rem;
     margin-right: 1rem;
   }
+  .team .team-card {
+    background: linear-gradient(219.28deg, #9aaab4 14.61%, #092866 90.92%);
+    color: white;
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+  }
+  .team .team-card::before {
+    display: none;
+  }
+  .team .team-card hr {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .team .team-card .team-hover .on-hover {
+    display: block;
+  }
+  .team .team-card .team-hover .off-hover {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
   .descriptive-card {
     margin: 2rem 0;
     display: -webkit-box;

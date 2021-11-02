@@ -6,41 +6,45 @@ import React, { useEffect, useState } from "react";
 import api from "../axios";
 import {EllipsisSpinner} from '../components/LoadingSpinners'
 
-const Blog = () => {
+const News = () => {
 
+  //after render scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
 //state declarations
-  const [blogs, setBlogs] = useState(null);
+  const [news, setNews] = useState(null);
 
   //call hooks
   useEffect(() => {
     const fetchAllBlogs = async () => {
       try {
         const response = await api.get("news");
-        setBlogs(response.data);
+        setNews(response.data);
       } catch (err) {}
     };
     fetchAllBlogs();
   }, []);
 
-  if(!blogs)
-    return(
-        <EllipsisSpinner />
-    )
- else
+
     return (
       <React.Fragment>
         <ViewHeader title="News"/>
         <div className="wrapper blog">
+        {(news==null) ?  <EllipsisSpinner /> :
+
             <div className="flex-container">
-                {blogs.map((item) => (
+                {news.map((item) => (
                 <Link key={item.id} to={`/news/${item.id}`}>
                     <BlogCard blogObject={item} />
                 </Link>
                 ))}
             </div>
+          } 
         </div>
       </React.Fragment>
   );
 };
 
-export default Blog;
+export default News;

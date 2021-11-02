@@ -1,7 +1,14 @@
 import "../styles/aboutUs.css";
+import { useEffect } from "react";
 import ViewHeader from "../components/ViewHeader";
 import React from "react";
 const AboutUs = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+
   return (
     <div className="about">
       <ViewHeader isClipless={true} />
@@ -50,6 +57,7 @@ const AboutUs = () => {
       </div>
 
       <div className="descriptive-box">
+        
         <div className="descriptive-card">
           <img
             className="descriptive-image"
@@ -160,7 +168,7 @@ const AboutUs = () => {
       </div>
 
       <div className="team">
-        <h1>The team behind RIU</h1>
+        <h1>The Team Behind RIU</h1>
         <div className="team-box flex-container">
           <div className="team-card">
             <div className="team-image">

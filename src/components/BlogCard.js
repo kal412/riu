@@ -1,11 +1,30 @@
 import "../styles/blog.css"
+import { useEffect,useState } from "react";
+import api from '../axios'
+import Moment from 'react-moment';
+import 'moment-timezone';
+
+
 export const BlogCard = ({blogObject}) => {
 
-    const excerptLength = 150;
+    //excerpt trimmer
+    const excerptLength = 130;//characters
     const truncateString = (string = '', maxLength = 50) => 
   string.length > maxLength 
     ? `${string.substring(0, maxLength)}<b>....</b>`
     : string
+
+    const [authorDetails,setAuthorDetails] = useState(null)
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await api.get( `users/${blogObject.author}`)
+            setAuthorDetails(response.data)
+           //console.log("comp.author: ",response.data)
+        }
+        
+        fetchData()
+    }, [])
 
 
     return (
@@ -18,8 +37,9 @@ export const BlogCard = ({blogObject}) => {
                 <h2>{blogObject.title.rendered}</h2>
                 <p dangerouslySetInnerHTML={{__html: truncateString(blogObject.excerpt.rendered, excerptLength)}} />
                 <div className="blog-card__body-author">
-                   Author: {blogObject.author} 
-                    <small>{blogObject.date}</small>
+                   Author: {authorDetails!=null? authorDetails.name : "Loading.."}
+                    <small>
+                     <Moment format="D MMM YYYY hh:mm a" tz="Asia/Kathmandu" date={blogObject.date} /></small>
                 </div>
             </div>
         </div>

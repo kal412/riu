@@ -5,7 +5,13 @@ import { EllipsisSpinner } from "../components/LoadingSpinners";
 import Author from "../components/Blog/Author";
 import ViewHeader from "../components/ViewHeader";
 
-const BlogContent = ({ match }) => {
+const NewsContent = ({ match }) => {
+
+  //after render scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   //state declaration
   const [blogData, setBlogData] = useState(null);
 
@@ -46,4 +52,4 @@ const BlogContent = ({ match }) => {
     );
 };
 
-export default BlogContent;
+export default NewsContent;
