@@ -3,14 +3,14 @@
 .events-card {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   margin-top: 3rem;
   padding: 0 1rem;
 }
 
 .datestamp {
-  margin-right: 8.5rem;
+  padding:0 1rem;
 
   .date {
     font-size: 4rem;
@@ -30,7 +30,7 @@
   flex-direction: column;
   justify-content: flex-end;
   width: 40%;
-  margin-right: 8.5rem;
+  padding:0 1.5rem;
 
   .title {
     font-weight: bold;

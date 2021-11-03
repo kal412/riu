@@ -1,7 +1,7 @@
 import { Link,NavLink } from "react-router-dom";
 import { useState } from "react";
 import "../styles/header.css";
-
+import ProgressBar from "./ProgressBar";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -23,10 +23,10 @@ const Header = () => {
 
   return (
     <div className={header ? "header active" : "header"}>
-
+      <ProgressBar />
       <div className="header-inner">
       <Link to="#">
-        <img className="header_logo" src={"./images/logo-small.png"} alt="logo" />
+        <img className="header_logo" src="images/static/logo-small.png" alt="RIU logo" />
       </Link>
 
       <div className="menu-btn"></div>

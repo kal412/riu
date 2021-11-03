@@ -88,9 +88,6 @@ a.nav-active::after {
 }
 
 @media (max-width: 900px) {
-  .header {
-    padding: 1.2rem 2rem;
-  }
   .header__nav {
     display: none;
   }

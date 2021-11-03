@@ -15,7 +15,7 @@ import EventContent from "./views/EventContent";
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App" id="app">
         <Header />
         <Switch>
           

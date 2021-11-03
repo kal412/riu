@@ -7,7 +7,6 @@
   width: 30rem;
   max-height: 30rem;
   background-color: $offwhite;
-  border:0.1rem solid rgba($dark,0.2 );
   box-shadow:  $card-shadow;
   transition: box-shadow 0.3s ease-in-out;
   
@@ -52,7 +51,7 @@
     box-shadow: $card-shadow-hover;
 
     .news-card__image-container img{
-      filter: blur(0.4rem);
+      filter: blur(0.2rem);
     }
     .news-card__description{
       opacity: 1;

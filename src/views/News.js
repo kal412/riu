@@ -27,6 +27,15 @@ const News = () => {
     fetchAllBlogs();
   }, []);
 
+  useEffect(() => {
+    const portfolio = async () => {
+      try {
+        const response = await api.get("http://portfolio-api-kalyan.herokuapp.com/api/v1/index");
+        console.log(response.data);
+      } catch (err) {}
+    };
+    portfolio();
+  }, []);
 
     return (
       <React.Fragment>
